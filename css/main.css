@@ -28,6 +28,20 @@ body {
   align-items: none;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Color del sombreado */
+  background-color: rgba(255, 0, 0, 0.5);
+  /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
+  /* Sombra */
+  box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.9);
+  /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
+}
 .banner .container-logo {
   display: flex;
   flex-direction: row;
@@ -35,11 +49,14 @@ body {
   align-items: center;
 }
 .banner .container-logo .logo {
+  z-index: 1;
   max-height: 45%;
   max-width: 45%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banner .top {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -96,6 +113,7 @@ body {
   align-items: center;
   height: 25%;
   color: #fff;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .Cabecera .dy-foto {
   width: 80px;
@@ -187,6 +205,7 @@ body {
   }
   .Cabecera .Cabecera-nav.isActive {
     position: relative;
+    height: -moz-fit-content;
     height: fit-content;
     opacity: 1;
   }
@@ -255,7 +274,8 @@ body {
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
 .container .container2 img {
   flex: 0 0 auto;
@@ -335,7 +355,8 @@ body {
 .container .container3 .container-curso .curso img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 4px solid #ff0000;
   margin-bottom: 20px;
@@ -355,17 +376,18 @@ body {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-bottom: 30px;
   background-color: rgb(139, 137, 137);
   padding: 15px;
-  min-height: 70vh;
-  box-shadow: inset 0px 0px 10px 5px rgb(0, 0, 0);
+  height: 50vh;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .container .container4 img {
   width: 100%;
   max-width: 500px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
 .container .container4 .formulario-container {
@@ -384,6 +406,7 @@ body {
   max-width: 800px;
   width: 100%;
   padding: 2rem;
+  height: 40vh;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(0, 0, 0);
@@ -440,6 +463,7 @@ body {
   position: relative;
   overflow: hidden;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+  margin-bottom: 30px;
 }
 .container .container-carousel .mySlides {
   display: flex;
@@ -452,13 +476,19 @@ body {
 .container .container-carousel .mySlides img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container .container-horario {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 15vh;
+  background-color: #333333;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
 .container .container-horario img {
   width: 100px;
@@ -476,11 +506,22 @@ body {
   font-size: 20px;
   color: #f2f2f2;
 }
+.container .container-seguridad {
+  height: 15vh;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.container .container-seguridad h2 {
+  z-index: 1;
+  font-size: 50px;
+  color: white;
+}
 .container .parallax {
   /* La imagen utilizada */
   background-image: url("/img/2.jpg");
-  /* Establecer una altura específica */
-  height: 350px;
   /* Crear el efecto de desplazamiento parallax */
   background-attachment: fixed;
   background-position: center;
@@ -499,7 +540,7 @@ body {
   background-color: rgba(255, 0, 0, 0.5);
   /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
   /* Sombra */
-  box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.9);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
   /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
 }
 .container .parallax2 {
@@ -525,13 +566,13 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin-bottom: 30px;
   background-color: #f2f2f2;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .container .msg {
   padding: 20px;
   background-color: #ffffff;
-  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -663,6 +704,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 footer .container-logo {
   width: 100%;
@@ -735,6 +777,7 @@ footer .container-datos .redes p {
   align-items: center;
 }
 .container-texto .imagen-vision {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
 }

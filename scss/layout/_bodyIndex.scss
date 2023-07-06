@@ -11,7 +11,6 @@
         background-size: cover;
         background-repeat: none;
         box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-
         .texto1 {
             margin-bottom: 255px;
 
@@ -32,8 +31,8 @@
         background-color: #f2f2f2;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
         img {
             flex: 0 0 auto;
             width: 100%;
@@ -143,11 +142,11 @@
     .container4 {
         @include properties-flex(row, flex-end, center);
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-bottom: 30px;
         background-color: rgb(139, 137, 137);
         padding: 15px;
-        min-height: 70vh;
-        box-shadow: inset 0px 0px 10px 5px rgb(0, 0, 0);
+        height: 50vh;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 
         img {
             width: 100%;
@@ -168,6 +167,7 @@
             max-width: 800px;
             width: 100%;
             padding: 2rem;
+            height: 40vh;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgb(0, 0, 0);
@@ -231,7 +231,7 @@
         position: relative;
         overflow: hidden;
         box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-
+        margin-bottom: 30px;
         .mySlides {
             @include properties-flex(row, center, center);
             width: 100%;
@@ -247,7 +247,11 @@
 
     .container-horario {
         @include properties-flex(row, center, center);
-
+        height: 15vh;
+        background-color: #333333;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
         img {
             width: 100px;
             z-index: 2;
@@ -269,11 +273,23 @@
         }
     }
 
+    .container-seguridad{
+        height: 15vh;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+        h2{
+            z-index: 1;
+            font-size: 50px;
+            color: white;
+        }
+    }
+
     .parallax {
         /* La imagen utilizada */
         background-image: url("/img/2.jpg");
-        /* Establecer una altura específica */
-        height: 350px;
         /* Crear el efecto de desplazamiento parallax */
         background-attachment: fixed;
         background-position: center;
@@ -292,7 +308,7 @@
             background-color: rgba(255, 0, 0, 0.5);
             /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
             /* Sombra */
-            box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.9);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
             /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
         }
     }
@@ -319,14 +335,14 @@
 
     .containerMsg {
         @include properties-flex(row, center, center);
-        margin: 20px;
+        margin-bottom: 30px;
         background-color: #f2f2f2;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
     }
 
     .msg {
         padding: 20px;
         background-color: #ffffff;
-        border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
 
