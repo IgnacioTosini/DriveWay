@@ -1,6 +1,6 @@
 footer {
-    @include properties-flex(row, space-between, flex-start);
-    background-color: #333;
+    @include properties-flex(row, space-between, center);
+    background-color: rgb(49, 49, 49);
     color: #fff;
     padding: 10px;
     position: relative;
@@ -10,7 +10,8 @@ footer {
 
     .container-logo {
         width: 100%;
-
+        height: 100%;
+        display: flex; 
         img {
             width: 100%;
             max-width: 500px;

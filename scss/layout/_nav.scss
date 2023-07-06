@@ -21,7 +21,8 @@ $background-color_3: #fff;
         padding: 10px;
         border-radius: 5%;
         transition: all ease 1s;
-        &:hover{
+
+        &:hover {
             transform: translateY(-5px);
         }
     }
@@ -139,13 +140,11 @@ $background-color_3: #fff;
     }
 }
 
-#menu-container {
-    position: relative;
-}
-
 .fixed-nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    z-index: 10;
+    box-shadow: inset 0px 0px 10px 5px rgb(0, 0, 0);
 }

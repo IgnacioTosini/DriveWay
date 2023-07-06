@@ -95,7 +95,7 @@
         </div>
 
         <div class="container-horario parallax">
-            <img src="../img/reloj.png" alt="">
+            <img src="../img/reloj.svg" alt="">
             <div class="horario">
                 <h2>Horario de atencion</h2>
                 <p>Lunes a viernes: 8:30hs a 18:30hs</p>
@@ -138,26 +138,23 @@
         </div>
 
         <div class="container4 parallax2">
-            <!--  <div class="container-ofi">
-                <img src="../img/8.jpg" alt="">
-            </div> -->
             <div class="formulario-container">
                 <form>
                     <h2>Contacto</h2>
                     <div class="campo">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input id="first_name" placeholder="Nombre" required="true" onpaste="return false" onblur="checkName()">
                     </div>
                     <div class="campo">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" placeholder="Email" required="true" onpaste="return false">
                     </div>
                     <div class="campo">
                         <label for="consulta">Consulta</label>
-                        <textarea id="consulta" name="consulta" required></textarea>
+                        <input id="consulta" placeholder="Consulta" required="true" onpaste="return false" onblur="checkConsulta()">
                     </div>
                     <div class="campo">
-                        <input class="buttonForm" type="button" onclick="enviarCorreo()" value="Enviar">
+                        <button onclick="sendMail()">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -200,6 +197,7 @@
         </div>
     </footer>
     <script src="../js/nav.js"></script>
+    <script src="../js/carousel.js"></script>
 </body>
 
 </html>

@@ -25,50 +25,13 @@ window.onload = function () {
     button.addEventListener('click', toggleMenu);
 };
 
-function enviarCorreo() {
-    let nombre = document.getElementById('nombre').value;
-    let email = document.getElementById('email').value;
-    let consulta = document.getElementById('consulta').value;
+const navbar = document.querySelector('#menu-container');
+const navbarTop = navbar.offsetTop;
 
-    let subject = 'Nuevo mensaje de contacto';
-    let body = "Nombre: " + nombre + "\nEmail: " + email + "\nConsulta: " + consulta;
-
-    let mailtoLink = "mailto:ignaciotosini2002@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-
-    window.location.href = mailtoLink;
-}
-
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    let i;
-    let x = document.getElementsByClassName("mySlides");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block";
-}
-
-setInterval(() => {
-    plusDivs(1);
-}, 3000);
-
-window.addEventListener('scroll', function() {
-    var menuContainer = document.getElementById('menu-container');
-    var menuHeight = menuContainer.offsetHeight;
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-  
-    if (scrollTop > menuHeight) {
-      menuContainer.classList.add('fixed-nav');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= navbarTop) {
+        navbar.classList.add('fixed-nav');
     } else {
-      menuContainer.classList.remove('fixed-nav');
+        navbar.classList.remove('fixed-nav');
     }
-  });
-  
+});

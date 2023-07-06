@@ -1,10 +1,10 @@
 .banner {
   position: relative;
   background-image: url("/img/banner2.jpg");
+  background-color: rgb(49, 49, 49);
   left: 0;
   top: 0;
   width: 100%;
-  height: 20vw;
   min-height: 200px;
   position: relative;
   background-size: cover;
@@ -14,11 +14,9 @@
 
   .container-logo {
     @include properties-flex(row, center, center);
-    height: 100%;
-
     .logo {
-      max-height: 50%;
-      max-width: 50%;
+      max-height: 45%;
+      max-width: 45%;
       object-fit: contain;
     }
   }
@@ -26,10 +24,10 @@
   .top {
     @include properties-flex(row, space-between, center);
     color: white;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgba(0, 0, 0, 0.192);
 
     .container-telefono {
-      margin: 0 20px;
+      margin: 0 10px;
       @include properties-flex(row, center, center);
 
       img {
@@ -45,7 +43,7 @@
 
     .container-redes {
       display: flex;
-      margin: 0 20px;
+      margin: 0 10px;
 
       a {
         img {

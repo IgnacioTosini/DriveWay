@@ -14,10 +14,10 @@ body {
 .banner {
   position: relative;
   background-image: url("/img/banner2.jpg");
+  background-color: rgb(49, 49, 49);
   left: 0;
   top: 0;
   width: 100%;
-  height: 20vw;
   min-height: 200px;
   position: relative;
   background-size: cover;
@@ -33,11 +33,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 .banner .container-logo .logo {
-  max-height: 50%;
-  max-width: 50%;
+  max-height: 45%;
+  max-width: 45%;
   object-fit: contain;
 }
 .banner .top {
@@ -46,10 +45,10 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgba(0, 0, 0, 0.192);
 }
 .banner .top .container-telefono {
-  margin: 0 20px;
+  margin: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -65,7 +64,7 @@ body {
 }
 .banner .top .container-redes {
   display: flex;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .banner .top .container-redes a img {
   flex-wrap: nowrap;
@@ -211,15 +210,13 @@ body {
     flex-wrap: wrap;
   }
 }
-#menu-container {
-  position: relative;
-}
-
 .fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  z-index: 10;
+  box-shadow: inset 0px 0px 10px 5px rgb(0, 0, 0);
 }
 
 .container {
@@ -281,7 +278,7 @@ body {
 }
 .container .container2 .containerTitle p {
   flex: 1 1 auto;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 1.5;
 }
 .container .container3 {
@@ -290,7 +287,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
 }
 .container .container3 .texto2 {
   margin: 20px;
@@ -357,7 +353,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
   background-color: rgb(139, 137, 137);
@@ -378,15 +374,14 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  margin-right: 20px;
-  background-color: rgb(139, 137, 137);
+  margin-right: 150px;
 }
 .container .container4 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
+  max-width: 800px;
   width: 100%;
   padding: 2rem;
   background-color: #ffffff;
@@ -453,7 +448,6 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  transition: opacity 0.3s ease;
 }
 .container .container-carousel .mySlides img {
   max-width: 100%;
@@ -468,6 +462,8 @@ body {
 }
 .container .container-horario img {
   width: 100px;
+  z-index: 2;
+  color: rgb(255, 255, 255);
 }
 .container .container-horario .horario {
   z-index: 1;
@@ -591,12 +587,76 @@ body {
     color: #f2f2f2;
   }
 }
+.container-answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-answers .imagen {
+  width: 35%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-answers .imagen img {
+  max-width: 100%;
+  border-radius: 5%;
+}
+.container-answers .container-questions {
+  width: 60%;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container-answers .container-questions .question {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: rgb(182, 182, 182);
+}
+.container-answers .container-questions .question h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5%;
+  color: #ffffff;
+}
+.container-answers .container-questions .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.container-answers .container-questions .open {
+  max-height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .container-answers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-answers .imagen {
+    width: 50%;
+  }
+  .container-answers .container-questions {
+    width: 100%;
+    margin: 0 20px;
+    align-items: normal;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  background-color: #333;
+  align-items: center;
+  background-color: rgb(49, 49, 49);
   color: #fff;
   padding: 10px;
   position: relative;
@@ -606,6 +666,8 @@ footer {
 }
 footer .container-logo {
   width: 100%;
+  height: 100%;
+  display: flex;
 }
 footer .container-logo img {
   width: 100%;
@@ -664,4 +726,49 @@ footer .container-datos .redes p {
   footer .container-datos .redes p {
     font-size: 1rem;
   }
+}
+
+.container-texto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container-texto .imagen-vision {
+  width: fit-content;
+  display: flex;
+}
+.container-texto .imagen-vision img {
+  width: 400px;
+}
+.container-texto .vision {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.parallaxUs {
+  /* La imagen utilizada */
+  background-image: url("/img/6.jpg");
+  /* Establecer una altura específica */
+  height: 250px;
+  /* Crear el efecto de desplazamiento parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.parallaxUs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Color del sombreado */
+  background-color: rgba(255, 0, 0, 0.5);
+  /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
+  /* Sombra */
+  box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.9);
+  /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
 }/*# sourceMappingURL=main.css.map */
