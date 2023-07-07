@@ -22,10 +22,7 @@
         }
 
         .vision {
-            #animated-heading {
-                font-size: 3rem;
-                opacity: 0; /* Mantenemos el texto oculto inicialmente */
-              }
+            
             @include properties-flex(column, center, center);
             width: 100%;
             max-width: 600px;
@@ -37,12 +34,20 @@
             h2 {
                 font-size: 2.5rem;
                 margin-bottom: 10px;
+                #animated-heading {
+                    font-size: 3rem;
+                    opacity: 0; /* Mantenemos el texto oculto inicialmente */
+                  }
             }
 
             p {
                 font-size: 1.375rem;
                 line-height: 1.5;
                 margin-bottom: 0;
+                #animated-heading {
+                    font-size: 3rem;
+                    opacity: 0; /* Mantenemos el texto oculto inicialmente */
+                  }
             }
         }
     }
