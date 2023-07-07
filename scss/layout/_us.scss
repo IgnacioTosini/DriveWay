@@ -8,7 +8,7 @@
     .container-vision2 {
         @include properties-flex(row, center, center);
         width: fit-content;
-        background-color: azure;
+        background-color: rgb(133, 136, 136);
         border-radius: 2%;
         box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 
