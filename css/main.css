@@ -24,7 +24,7 @@ body {
   background-repeat: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: none;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
@@ -52,8 +52,7 @@ body {
   z-index: 1;
   max-height: 45%;
   max-width: 45%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .banner .top {
   z-index: 1;
@@ -205,7 +204,6 @@ body {
   }
   .Cabecera .Cabecera-nav.isActive {
     position: relative;
-    height: -moz-fit-content;
     height: fit-content;
     opacity: 1;
   }
@@ -265,42 +263,6 @@ body {
 .container .container1 .texto1 h2 {
   color: white;
 }
-.container .container2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
-}
-.container .container2 img {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 500px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.container .container2 .containerTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 100%;
-  align-content: center;
-}
-.container .container2 .containerTitle h2 {
-  font-size: 2.5rem;
-}
-.container .container2 .containerTitle p {
-  flex: 1 1 auto;
-  font-size: 1.375rem;
-  line-height: 1.5;
-}
 .container .container3 {
   display: flex;
   flex-direction: column;
@@ -321,9 +283,10 @@ body {
 }
 .container .container3 .container-curso {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 80px;
   margin-top: 30px;
 }
@@ -333,7 +296,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background: linear-gradient(to top, #ff0000, #000000);
+  background: linear-gradient(to top, #ff0000, rgb(255, 255, 255));
   color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -355,8 +318,7 @@ body {
 .container .container3 .container-curso .curso img {
   width: 200px;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   border: 4px solid #ff0000;
   margin-bottom: 20px;
@@ -386,8 +348,7 @@ body {
   width: 100%;
   max-width: 500px;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
 .container .container4 .formulario-container {
@@ -476,15 +437,13 @@ body {
 .container .container-carousel .mySlides img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .container .container-horario {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 15vh;
   background-color: #333333;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -518,6 +477,11 @@ body {
   z-index: 1;
   font-size: 50px;
   color: white;
+}
+@media screen and (max-width: 650px) {
+  .container .container-seguridad h2 {
+    font-size: 1.6rem;
+  }
 }
 .container .parallax {
   /* La imagen utilizada */
@@ -770,30 +734,109 @@ footer .container-datos .redes p {
   }
 }
 
-.container-texto {
+.container-vision {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px;
 }
-.container-texto .imagen-vision {
-  width: -moz-fit-content;
-  width: fit-content;
+.container-vision .container-vision2 {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: azure;
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
-.container-texto .imagen-vision img {
-  width: 400px;
+.container-vision .container-vision2 img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 10px;
 }
-.container-texto .vision {
-  width: 20%;
-  margin-left: 20px;
+.container-vision .container-vision2 .vision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  align-items: flex-start;
+  border-radius: 2%;
+  margin: 30px;
+  padding: 14px;
+}
+.container-vision .container-vision2 .vision h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.container-vision .container-vision2 .vision p {
+  font-size: 1.375rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (max-width: 1050px) {
+  .container-vision .container-vision2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-vision .container-vision2 .vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.enfoque {
+  width: 100%;
+  height: 100%;
+  max-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 23px;
+  color: white;
+}
+.enfoque .enfoque-texto {
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+}
+@media screen and (max-width: 600px) {
+  .enfoque .enfoque-texto h2 {
+    font-size: 2rem;
+  }
+  .enfoque .enfoque-texto p {
+    font-size: 1rem;
+  }
+}
+.enfoque .enfoque-texto h2 {
+  z-index: 1;
+}
+.enfoque .enfoque-texto p {
+  z-index: 1;
 }
 
 .parallaxUs {
   /* La imagen utilizada */
   background-image: url("/img/6.jpg");
   /* Establecer una altura específica */
-  height: 250px;
+  height: 100%;
+  max-height: 250px;
   /* Crear el efecto de desplazamiento parallax */
   background-attachment: fixed;
   background-position: center;

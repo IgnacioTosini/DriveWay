@@ -1,30 +1,98 @@
-.container-texto{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.container-vision {
+    @include properties-flex(row, center, center);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px;
 
-    .imagen-vision{
+    .container-vision2 {
+        @include properties-flex(row, center, center);
         width: fit-content;
-        display: flex;
-        img{
-            width: 400px;
+        background-color: azure;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+
+        img {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            margin: 30px;
+            padding: 10px;
+        }
+
+        .vision {
+            @include properties-flex(column, center, center);
+            width: 100%;
+            max-width: 600px;
+            align-items: flex-start;
+            border-radius: 2%;
+            margin: 30px;
+            padding: 14px;
+
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.375rem;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
         }
     }
 
-    .vision{
-        width: 20%;
-        margin-left: 20px;
+    @media (max-width: 1050px) {
+        .container-vision2 {
+            @include properties-flex(column, center, center);
+
+            .vision {
+                @include properties-flex(column, center, center);
+                text-align: center;
+            }
+        }
     }
 }
 
+.enfoque {
+    width: 100%;
+    height: 100%;
+    max-height: 20vh;
+    @include properties-flex(column, center, center);
+    text-align: center;
+    font-size: 23px;
+    color: white;
 
+    .enfoque-texto {
+        z-index: 1;
+        width: 100%;
+        max-width: 1000px;
+        @media screen and (max-width: 600px) {
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        h2 {
+            z-index: 1;
+        }
+
+        p {
+            z-index: 1;
+        }
+    }
+}
 
 .parallaxUs {
     /* La imagen utilizada */
     background-image: url("/img/6.jpg");
     /* Establecer una altura específica */
-    height: 250px;
+    height: 100%;
+    max-height: 250px;
     /* Crear el efecto de desplazamiento parallax */
     background-attachment: fixed;
     background-position: center;
