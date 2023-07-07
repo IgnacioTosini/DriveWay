@@ -593,67 +593,74 @@ body {
   }
 }
 .container-answers {
-  width: 100%;
   display: flex;
-  justify-content: center;
-}
-.container-answers .imagen {
-  width: 35%;
-  margin: 10px;
-  padding: 10px;
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+.container-answers .imagen {
+  width: 40%;
+  margin-right: 20px;
 }
 .container-answers .imagen img {
   max-width: 100%;
-  border-radius: 5%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .container-answers .container-questions {
   width: 60%;
-  margin-left: auto;
-  margin-top: 10px;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.container-answers .container-questions .question {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  background-color: rgb(182, 182, 182);
-}
-.container-answers .container-questions .question h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  background-color: red;
-  padding: 10px;
-  border-radius: 5%;
-  color: #ffffff;
-}
-.container-answers .container-questions .answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-.container-answers .container-questions .open {
   max-height: 500px;
+  overflow-y: scroll;
 }
-@media screen and (max-width: 768px) {
+.container-answers .container-questions::-webkit-scrollbar {
+  width: 5px;
+}
+.container-answers .container-questions::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+.container-answers .question {
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container-answers .question h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.container-answers .answer {
+  max-height: 0;
+  overflow-y: scroll;
+  transition: max-height 0.3s ease-out;
+}
+.container-answers .answer::-webkit-scrollbar {
+  width: 5px;
+}
+.container-answers .answer::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+@media screen and (max-width: 700px) {
   .container-answers {
     flex-direction: column;
-    align-items: center;
   }
   .container-answers .imagen {
-    width: 50%;
+    margin-bottom: 30px;
   }
   .container-answers .container-questions {
-    width: 100%;
-    margin: 0 20px;
-    align-items: normal;
+    width: 95%;
   }
+}
+
+.question.active .answer {
+  max-height: 500px;
 }
 
 footer {

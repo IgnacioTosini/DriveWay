@@ -1,71 +1,79 @@
 .container-answers {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    @include properties-flex(row, center, center);
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+
 
     .imagen {
-        width: 35%;
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 40%;
+        margin-right: 20px;
 
         img {
             max-width: 100%;
-            border-radius: 5%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     }
 
     .container-questions {
         width: 60%;
-        margin-left: auto;
-        margin-top: 10px;
-        margin-right: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        max-height: 500px;
+        overflow-y: scroll;
 
-        .question {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            background-color: rgb(182, 182, 182);
-
-            h1 {
-                margin: 0;
-                font-size: 1.5rem;
-                background-color: red;
-                padding: 10px;
-                border-radius: 5%;
-                color: #ffffff;
-            }
+        &::-webkit-scrollbar {
+            width: 5px;
         }
 
-        .answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .open {
-            max-height: 500px;
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            border-radius: 10px;
         }
     }
 
-    @media screen and (max-width:768px) {
-        flex-direction: column;
-        align-items: center;
+    .question {
+        cursor: pointer;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-        .imagen {
-            width: 50%;
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .answer {
+        max-height: 0;
+        overflow-y: scroll;
+        transition: max-height .3s ease-out;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            border-radius: 10px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+
+        .imagen{
+            margin-bottom: 30px;
         }
 
         .container-questions {
-            width: 100%;
-            margin: 0 20px;
-            align-items: normal;
+            width: 95%;
         }
     }
+}
+
+.question.active .answer {
+    max-height: 500px;
 }
