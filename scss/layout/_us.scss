@@ -22,6 +22,10 @@
         }
 
         .vision {
+            #animated-heading {
+                font-size: 3rem;
+                opacity: 0; /* Mantenemos el texto oculto inicialmente */
+              }
             @include properties-flex(column, center, center);
             width: 100%;
             max-width: 600px;
