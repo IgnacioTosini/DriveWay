@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="icon" href="/img/dy monograma-02.png" type="image/x-icon">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
     <title>DriveWay</title>
 </head>
 
@@ -51,12 +52,6 @@
     </header>
 
     <main class="container">
-        <!--         <div class="container1 parallax">
-            <div class="texto1">
-                <h2>Bienvenido a DriveWay!</h2>
-                <p>Más de 20 años de experiencia en la formación de nuevos conductores.</p>
-            </div>
-        </div> -->
         <div class="container-horario">
             <img src="../img/reloj.svg" alt="">
             <div class="horario">
@@ -80,7 +75,7 @@
         <div class="container-vision">
             <div class="container-vision2">
                 <img src="/img/1.jpg" alt="">
-                <div class="vision">
+                <div class="vision animated-heading">
                     <h2>Animate</h2>
                     <p>
                         Driveway es una academia de manejo fundada en 2002. Nos especializamos en formar conductores
@@ -101,35 +96,35 @@
         </div>
 
         <div class="container-seguridad parallax">
-            <h2> Confianza y seguridad</h2>
+            <h2 class="animated-heading"> Confianza y seguridad</h2>
         </div>
 
         <div class="container3">
             <div class="texto2">
-                <h2>Nuestros cursos!</h2>
+                <h2 class="animated-heading">Nuestros cursos!</h2>
             </div>
 
             <div class="container-curso">
-                <div class="curso">
+                <div class="curso animated-heading">
                     <img src="../img/up.jpg" alt="">
                     <h3>Curso avanzado</h3>
                     <p><b class="black">5</b> clases practicas de 45 minutos. </p>
                     <p><b class="black">1</b> Simulador de manejo.</p>
                 </div>
-                <div class="curso">
+                <div class="curso animated-heading">
                     <img src="../img/208.jpg" alt="">
                     <h3>Curso Intermedio</h3>
                     <p><b class="black">10</b> clases practicas de 45 minutos. </p>
                     <p><b class="black">1</b> Simulador de manejo.</p>
                 </div>
-                <div class="curso">
+                <div class="curso animated-heading">
                     <img src="../img/up.jpg" alt="">
                     <h3>Curso Inicial</h3>
                     <p><b class="black">15</b> clases practicas de 45 minutos. </p>
                     <p><b class="black">1</b> Simulador de manejo.</p>
                 </div>
             </div>
-            <div class="texto3">
+            <div class="texto3 animated-heading">
                 <p>
                     *En caso de necesitar mas clases de las establecidas, brindamos la posibilidad de agregar las
                     necesarias
@@ -140,7 +135,7 @@
 
         <div class="containerMsg">
             <div class="msg">
-                <p>Gracias a nuestros vehiculos con doble comando, se fomenta la confianza y se minimizan los riesgos,
+                <p class="animated-heading">Gracias a nuestros vehiculos con doble comando, se fomenta la confianza y se minimizan los riesgos,
                     brindando una experiencia de conducción más segura y tranquila para todos los involucrados.</p>
             </div>
         </div>
@@ -206,6 +201,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/observer.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/carousel.js"></script>
 </body>
