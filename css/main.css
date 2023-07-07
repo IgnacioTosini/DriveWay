@@ -52,7 +52,8 @@ body {
   z-index: 1;
   max-height: 45%;
   max-width: 45%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banner .top {
   z-index: 1;
@@ -204,6 +205,7 @@ body {
   }
   .Cabecera .Cabecera-nav.isActive {
     position: relative;
+    height: -moz-fit-content;
     height: fit-content;
     opacity: 1;
   }
@@ -318,7 +320,8 @@ body {
 .container .container3 .container-curso .curso img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 4px solid #ff0000;
   margin-bottom: 20px;
@@ -348,7 +351,8 @@ body {
   width: 100%;
   max-width: 500px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
 .container .container4 .formulario-container {
@@ -437,7 +441,8 @@ body {
 .container .container-carousel .mySlides img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container .container-horario {
   display: flex;
@@ -756,6 +761,7 @@ footer .container-datos .redes p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: azure;
   border-radius: 2%;
