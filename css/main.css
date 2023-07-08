@@ -372,7 +372,7 @@ body {
   margin-bottom: 30px;
   background-color: rgb(139, 137, 137);
   padding: 15px;
-  height: 50vh;
+  height: 80vh;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .container .container4 img {
@@ -390,56 +390,69 @@ body {
   z-index: 1;
   margin-right: 150px;
 }
-.container .container4 form {
+.container .container4 .formulario-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 350px;
   width: 100%;
   padding: 2rem;
-  height: 40vh;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
-.container .container4 form h2 {
+.container .container4 .formulario-container form h2 {
   margin-bottom: 1rem;
   color: #ff0000;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
-.container .container4 form .campo {
+.container .container4 .formulario-container form .campo {
   margin-bottom: 1.5rem;
   width: 100%;
 }
-.container .container4 form .campo label {
+.container .container4 .formulario-container form .campo label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #000000;
 }
-.container .container4 form .campo input[type=text],
-.container .container4 form .campo input[type=email],
-.container .container4 form .campo textarea {
+.container .container4 .formulario-container form .campo input[type=text],
+.container .container4 .formulario-container form .campo input[type=email],
+.container .container4 .formulario-container form .campo textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #000000;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  border-radius: 0px;
+  transition: border-bottom-color 0.3s ease-in-out;
 }
-.container .container4 form .campo textarea {
+.container .container4 .formulario-container form .campo input[type=text]:focus,
+.container .container4 .formulario-container form .campo input[type=email]:focus,
+.container .container4 .formulario-container form .campo textarea:focus {
+  outline: none;
+  border-bottom-color: #ff0000;
+}
+.container .container4 .formulario-container form .campo textarea {
   min-height: 100px;
 }
-.container .container4 form .buttonForm {
+.container .container4 .formulario-container form .buttonForm {
   padding: 0.5rem 1rem;
   background-color: #ff0000;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-.container .container4 form .buttonForm:hover {
+.container .container4 .formulario-container form .buttonForm:hover {
   background-color: #990000;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .container .container4 .formulario-container {
+    margin: 0;
+  }
 }
 .container .texto3 {
   display: flex;
@@ -630,6 +643,40 @@ body {
 }
 .container .msg p::after {
   bottom: -5px;
+}
+.container .whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+  transition: background-image 0.5s ease-in-out;
+  z-index: 99;
+}
+.container .whatsapp-container img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  transition: background-image 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .whatsapp-container span {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(-100px);
+  opacity: 0;
+  white-space: nowrap;
+  color: white;
+}
+.container .whatsapp-container.hover {
+  background-image: linear-gradient(to right, #6A354B, #E93237, #5E2E41);
+}
+.container .whatsapp-container.hover span {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 @keyframes scrollUp {
@@ -909,7 +956,7 @@ footer .container-datos .redes p {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  background-color: rgb(133, 136, 136);
+  background-color: white;
   border-radius: 2%;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
