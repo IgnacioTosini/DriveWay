@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Verdana";
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background-color: #EFEEEC;
+  background-color: #ffffff;
 }
 
 .banner {
@@ -49,7 +49,8 @@ body {
   z-index: 1;
   max-height: 45%;
   max-width: 45%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banner .top {
   z-index: 1;
@@ -111,7 +112,7 @@ body {
 }
 .Cabecera {
   width: 100%;
-  background-color: #FF0000;
+  background-color: #3b3b3b;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -121,8 +122,9 @@ body {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .Cabecera .dy-foto {
-  width: 80px;
+  width: 270px;
   padding: 10px;
+  margin: 15px;
   border-radius: 5%;
   transition: all ease 1s;
 }
@@ -135,7 +137,13 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
-  background-color: #FF0000;
+  background-color: #3b3b3b;
+}
+.Cabecera .Cabecera-ul img {
+  width: 100%;
+  max-width: 45px;
+  min-width: 45px;
+  margin: 5px;
 }
 .Cabecera .Cabecera-ul .Cabecera-li {
   margin: 0 0.5em;
@@ -145,6 +153,7 @@ body {
   text-align: center;
   text-decoration: none;
   border-radius: 10%;
+  font-size: 18.5px;
   font-weight: bold;
   position: relative;
 }
@@ -155,7 +164,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 0, 0);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.3s ease;
@@ -210,6 +219,7 @@ body {
   }
   .Cabecera .Cabecera-nav.isActive {
     position: relative;
+    height: -moz-fit-content;
     height: fit-content;
     opacity: 1;
   }
@@ -246,6 +256,39 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+}
+.container .container-video {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 70vh;
+}
+.container .container-video #video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .container-video .video-text {
+  position: absolute;
+  bottom: 10px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
+  line-height: 1;
+}
+.container .container-video .video-text h1 {
+  font-size: 90px;
+  margin-bottom: 10px;
+}
+.container .container-video .video-text p {
+  font-size: 18px;
 }
 .container .container1 {
   background-image: url("/img/5.jpg");
@@ -332,7 +375,8 @@ body {
 .container .container3 .container-curso .curso img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 4px solid #ff0000;
   margin-bottom: 20px;
@@ -343,7 +387,6 @@ body {
 }
 .container .container3 .container-curso .verde {
   background: #a8ff78;
-  background: -webkit-linear-gradient(to bottom, #ffffff, #a8ff78);
   background: linear-gradient(to bottom, #ffffff, #59ff00);
 }
 .container .container3 .container-curso .verde img {
@@ -351,7 +394,6 @@ body {
 }
 .container .container3 .container-curso .amarillo {
   background: #fffc00;
-  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00);
   background: linear-gradient(to bottom, #ffffff, #fffc00);
 }
 .container .container3 .container-curso .amarillo img {
@@ -379,7 +421,8 @@ body {
   width: 100%;
   max-width: 500px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
 .container .container4 .formulario-container {
@@ -481,20 +524,22 @@ body {
 .container .container-carousel .mySlides img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container .container-horario {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #333333;
-  margin-top: 30px;
+  background-color: #cccccc;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+  padding: 30px;
 }
 .container .container-horario img {
-  width: 100px;
+  width: 25%;
+  min-width: 100px;
+  margin-left: 15px;
   z-index: 2;
   color: rgb(255, 255, 255);
 }
@@ -509,14 +554,51 @@ body {
   font-size: 20px;
   color: #f2f2f2;
 }
+.container .container-texto-foto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+.container .container-texto-foto .container-fondo {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  background-image: url(/img/interior.jpg);
+  width: 70%;
+  height: 500px;
+  background-size: cover;
+  margin-bottom: 30px;
+  position: relative;
+}
+.container .container-texto-foto .container-fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de transparencia según tus necesidades */
+}
+.container .container-texto-foto .container-fondo .texto1 {
+  margin-left: 50px;
+  z-index: 1;
+  color: #ffffff;
+  text-align: left;
+  width: 50%;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
 .container .container-seguridad {
-  height: 15vh;
+  height: 25vh;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
   text-align: center;
 }
 .container .container-seguridad #animated-heading {
@@ -525,7 +607,7 @@ body {
 }
 .container .container-seguridad h2 {
   z-index: 1;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
 }
 @media screen and (max-width: 650px) {
@@ -569,7 +651,7 @@ body {
 }
 .container .parallax {
   /* La imagen utilizada */
-  background-image: url("/img/2.jpg");
+  background-image: url("/img/coches.jpg");
   /* Crear el efecto de desplazamiento parallax */
   background-attachment: fixed;
   background-position: center;
@@ -585,10 +667,10 @@ body {
   right: 0;
   bottom: 0;
   /* Color del sombreado */
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.377);
   /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
   /* Sombra */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9); */
   /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
 }
 .container .parallax2 {
@@ -616,37 +698,43 @@ body {
   align-items: center;
   margin-bottom: 30px;
   background-color: #f2f2f2;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  /*         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
 }
 .container .msg {
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #cccccc;
+  /*         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: center;
 }
 .container .msg p {
-  color: #333333;
+  color: #000000;
   font-size: 27px;
   line-height: 1.5;
   position: relative;
+  /* &::before,
+  &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: red;
+  }
+
+  &::before {
+      top: -5px;
+  }
+
+  &::after {
+      bottom: -5px;
+  } */
 }
-.container .msg p::before, .container .msg p::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: red;
-}
-.container .msg p::before {
-  top: -5px;
-}
-.container .msg p::after {
-  bottom: -5px;
+.container .msg .red {
+  color: #990000 !important;
 }
 .container .whatsapp-container {
   position: fixed;
-  bottom: 20px;
+  bottom: 253px;
   right: 20px;
   display: flex;
   flex-direction: row;
@@ -656,27 +744,29 @@ body {
   border-radius: 25px;
   transition: background-image 0.5s ease-in-out;
   z-index: 99;
+  /* span {
+      transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+      transform: translateX(-100px);
+      opacity: 0;
+      white-space: nowrap;
+      color: white;
+  }
+
+  &.hover {
+      background-image: linear-gradient(to right, #6A354B, #E93237, #5E2E41);
+
+      span {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  } */
 }
 .container .whatsapp-container img {
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   margin-left: 10px;
   transition: background-image 0.3s ease-in-out;
   cursor: pointer;
-}
-.container .whatsapp-container span {
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transform: translateX(-100px);
-  opacity: 0;
-  white-space: nowrap;
-  color: white;
-}
-.container .whatsapp-container.hover {
-  background-image: linear-gradient(to right, #6A354B, #E93237, #5E2E41);
-}
-.container .whatsapp-container.hover span {
-  transform: translateX(0);
-  opacity: 1;
 }
 
 @keyframes scrollUp {
@@ -844,7 +934,7 @@ footer .container-datos .redes {
   align-items: center;
 }
 footer .container-datos .redes img {
-  width: 50px;
+  width: 40px;
 }
 footer .container-datos .redes p {
   margin: 0 10px;
@@ -924,6 +1014,7 @@ footer .container-datos .redes p {
     padding: 10px;
   }
   .containerServicios .subContainerUno .texto, .containerServicios .subContainerDos .texto {
+    max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 20px;
     text-align: center;
@@ -955,6 +1046,7 @@ footer .container-datos .redes p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: white;
   border-radius: 2%;
