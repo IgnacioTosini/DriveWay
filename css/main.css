@@ -320,20 +320,22 @@ body {
   width: 100%;
 }
 .container .container3 .texto2 {
-  margin: 20px;
+  margin-bottom: 20px;
   width: 100%;
-  background-color: #ff0000;
+  /* background-color: #ff0000; */
   text-align: center;
   padding: 20px;
-  font-size: 28px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-weight: bold;
+  font-size: 34px;
+  /*             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
+  color: #ff0000;
 }
 .container .container3 .texto2 #animated-heading {
   font-size: 3rem;
   opacity: 0;
   /* Mantenemos el texto oculto inicialmente */
+}
+.container .container3 .texto2 h2 {
+  font-weight: bolder;
 }
 .container .container3 .container-curso {
   display: flex;
@@ -342,7 +344,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 80px;
-  margin-top: 30px;
 }
 .container .container3 .container-curso .curso {
   display: flex;
@@ -350,13 +351,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background: linear-gradient(to top, #ff0000, rgb(255, 255, 255));
+  background: white;
   color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-  height: 500px;
-  width: 300px;
+  height: 400px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -370,34 +368,37 @@ body {
   color: #000000;
 }
 .container .container3 .container-curso .curso h3 {
-  color: #000000;
+  color: #ff0000;
+  font-size: 27px;
 }
 .container .container3 .container-curso .curso img {
   width: 200px;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ff0000;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .container .container3 .container-curso .curso p {
-  margin-bottom: 10px;
   color: #000000;
+  font-size: 20px;
 }
-.container .container3 .container-curso .verde {
-  background: #a8ff78;
-  background: linear-gradient(to bottom, #ffffff, #59ff00);
+.container .container3 .container-curso .curso p b {
+  color: #ff0000;
 }
-.container .container3 .container-curso .verde img {
-  border: 4px solid #15ff00;
+.container .container3 .container-curso .curso-boton {
+  background-color: #ff0000;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
 }
-.container .container3 .container-curso .amarillo {
-  background: #fffc00;
-  background: linear-gradient(to bottom, #ffffff, #fffc00);
+.container .container3 .container-curso .curso-boton .curso-boton-texto {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.container .container3 .container-curso .amarillo img {
-  border: 4px solid #eeff00;
+.container .container3 .container-curso .curso-boton .curso-boton-texto a {
+  text-decoration: none;
+  color: inherit;
 }
 .container .container3 .texto3 p {
   margin: 20px;
@@ -559,19 +560,20 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  width: 100%;
+  width: auto;
 }
 .container .container-texto-foto .container-fondo {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: flex-end;
+  justify-content: right;
+  align-items: flex-start;
   background-image: url(/img/interior.jpg);
-  width: 70%;
-  height: 500px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-bottom: 30px;
   position: relative;
+  width: 48%;
+  height: 482px;
 }
 .container .container-texto-foto .container-fondo::before {
   content: "";
@@ -583,13 +585,13 @@ body {
   background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de transparencia según tus necesidades */
 }
 .container .container-texto-foto .container-fondo .texto1 {
-  margin-left: 50px;
+  margin-right: 50px;
   z-index: 1;
   color: #ffffff;
-  text-align: left;
-  width: 50%;
-  margin-bottom: 50px;
-  font-size: 30px;
+  text-align: right;
+  width: 45%;
+  margin-top: 20px;
+  font-size: 32px;
 }
 .container .container-seguridad {
   height: 25vh;
