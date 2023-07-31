@@ -1,7 +1,7 @@
 .container-answers {
     @include properties-flex(row, center, center);
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #000000;
     border-radius: 10px;
     gap: 20px;
 
@@ -16,6 +16,43 @@
         }
     }
 
+    .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        @include properties-flex(row, center, center);
+        padding: 10px;
+        border-radius: 25px;
+        transition: background-image .5s ease-in-out;
+        z-index: 99;
+
+        img {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
+            transition: background-image .3s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* span {
+            transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+            transform: translateX(-100px);
+            opacity: 0;
+            white-space: nowrap;
+            color: white;
+        }
+
+        &.hover {
+            background-image: linear-gradient(to right, #6A354B, #E93237, #5E2E41);
+
+            span {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        } */
+    }
+
+
     .container-questions {
         width: 40%;
         max-height: 600px;
@@ -26,7 +63,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: darkgrey;
+            background-color: rgb(255, 255, 255);
             border-radius: 10px;
         }
     }
@@ -40,7 +77,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         h1 {
-            font-size: 18px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
     }
@@ -54,7 +91,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: darkgrey;
+            background-color: rgb(255, 255, 255);
             border-radius: 10px;
         }
     }

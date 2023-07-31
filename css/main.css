@@ -119,7 +119,6 @@ body {
   align-items: center;
   height: 25%;
   color: #fff;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .Cabecera .dy-foto {
   width: 270px;
@@ -693,6 +692,59 @@ body {
   background-color: rgba(48, 48, 48, 0.5);
   box-shadow: inset 0 0 20px rgba(48, 48, 48, 0.5);
 }
+.container .container-contenidos {
+  margin-bottom: 30px;
+}
+.container .container-contenidos .texto-cont {
+  margin-top: 30px;
+  width: 100%;
+  /* background-color: #ff0000; */
+  text-align: center;
+  padding: 20px;
+  font-size: 34px;
+  /*             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
+  color: red;
+}
+.container .container-contenidos .texto-cont #animated-heading {
+  font-size: 3rem;
+  opacity: 0;
+  /* Mantenemos el texto oculto inicialmente */
+}
+.container .container-contenidos .texto-cont h2 {
+  font-weight: bolder;
+}
+.container .container-contenidos .servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  gap: 20px;
+}
+.container .container-contenidos .servicios .container-servicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+.container .container-contenidos .servicios .container-servicio .servicio-texto {
+  margin-left: 20px;
+}
+.container .container-contenidos .servicios .container-servicio .servicio-texto h3 {
+  color: black;
+}
+@keyframes scrollUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .container .containerMsg {
   display: flex;
   flex-direction: row;
@@ -736,8 +788,8 @@ body {
 }
 .container .whatsapp-container {
   position: fixed;
-  bottom: 253px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -896,24 +948,26 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 footer .container-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
   display: flex;
 }
 footer .container-logo img {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
 }
 footer .container-mapa {
-  width: 100%;
+  margin: 20px;
 }
 footer .container-mapa iframe {
-  border-radius: 2%;
-  width: 100%;
-  height: 350px;
+  width: 400px;
+  height: 250px;
 }
 footer .container-datos {
   display: flex;
@@ -921,26 +975,25 @@ footer .container-datos {
   justify-content: flex-end;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin-top: 40px;
   width: 100%;
   max-height: 800px;
-}
-footer .container-datos .logo {
-  width: 100%;
-  max-width: 450px;
+  line-height: 2;
 }
 footer .container-datos .redes {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-}
-footer .container-datos .redes img {
-  width: 40px;
-}
-footer .container-datos .redes p {
+  width: 100%;
   margin: 0 10px;
   font-size: 1.5rem;
+}
+footer .container-datos .redes a {
+  text-decoration: none;
+  color: inherit;
+}
+footer .container-datos .redes img {
+  width: 35px;
 }
 @media (max-width: 768px) {
   footer {
@@ -962,67 +1015,46 @@ footer .container-datos .redes p {
   }
 }
 
-.containerServicios {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 50px;
-  margin: 20px;
+.container-contenidos .texto-cont {
+  margin-top: 30px;
+  width: 100%;
+  /* background-color: #ff0000; */
+  text-align: center;
+  padding: 20px;
+  font-size: 34px;
+  /*             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
+  color: red;
 }
-.containerServicios .subContainerUno {
+.container-contenidos .texto-cont #animated-heading {
+  font-size: 3rem;
+  opacity: 0;
+  /* Mantenemos el texto oculto inicialmente */
+}
+.container-contenidos .texto-cont h2 {
+  font-weight: bolder;
+}
+.container-contenidos .servicios {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  gap: 20px;
 }
-.containerServicios .subContainerDos {
+.container-contenidos .servicios .container-servicio {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  width: 25%;
 }
-.containerServicios .subContainerUno, .containerServicios .subContainerDos {
-  background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 0%, #ff0000 100%);
-  width: 100%;
-  max-width: 600px;
-  border-radius: 5%;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+.container-contenidos .servicios .container-servicio .servicio-texto {
+  margin-left: 20px;
 }
-.containerServicios .subContainerUno .containerImg, .containerServicios .subContainerDos .containerImg {
-  margin: 10px;
-  width: 100%;
-  max-width: 600px;
+.container-contenidos .servicios .container-servicio .servicio-texto h3 {
+  color: black;
 }
-.containerServicios .subContainerUno .containerImg img, .containerServicios .subContainerDos .containerImg img {
-  width: 100%;
-  border-radius: 5%;
-}
-.containerServicios .subContainerUno .texto, .containerServicios .subContainerDos .texto {
-  margin: 10px;
-  max-height: 250px;
-  max-width: 200px;
-}
-@media screen and (max-width: 1000px) {
-  .containerServicios {
-    flex-direction: column;
-  }
-  .containerServicios .subContainerUno, .containerServicios .subContainerDos {
-    flex-direction: column;
-    max-width: 700px;
-  }
-  .containerServicios .subContainerUno .containerImg, .containerServicios .subContainerDos .containerImg {
-    padding: 10px;
-  }
-  .containerServicios .subContainerUno .texto, .containerServicios .subContainerDos .texto {
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    margin: 20px;
-    text-align: center;
-  }
-}
-
 @keyframes scrollUp {
   from {
     opacity: 0;
@@ -1033,6 +1065,7 @@ footer .container-datos .redes p {
     transform: translateY(0);
   }
 }
+
 .container-vision {
   display: flex;
   flex-direction: row;
