@@ -29,9 +29,10 @@ const navbar = document.querySelector('#menu-container');
 const navbarTop = navbar.offsetTop;
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset >= navbarTop) {
+    if (window.pageYOffset > navbarTop) {
         navbar.classList.add('fixed-nav');
     } else {
         navbar.classList.remove('fixed-nav');
     }
 });
+

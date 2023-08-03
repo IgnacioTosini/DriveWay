@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <link rel="icon" href="./img/dy monograma-02.png" type="image/x-icon" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-    <title>DriveWay</title>
-  </head>
 
-  <body>
-    <header>
-      <!-- <div class="banner">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="icon" href="./img/dy monograma-02.png" type="image/x-icon" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+  <title>DriveWay</title>
+</head>
+
+<body>
+  <header>
+    <!-- <div class="banner">
             <div class="top">
                 <div class="container-telefono">
                     <img src="./img/TELEFONO-04.png" alt="">
@@ -36,63 +34,53 @@
                 <img src="./img/titulo.png" alt="logo" class="logo">
             </div>
         </div> -->
-      <nav id="menu-container">
-        <div class="Cabecera">
-          <div class="containerBuscador">
+    <nav id="menu-container">
+      <div class="Cabecera">
+        <div class="containerBuscador">
+          <div class="subcontainerBuscador">
             <img src="./img/titulo.png" alt="dy" class="dy-foto" />
-            <button class="Cabecera-button">
-              <i class="fa fa-bars"></i>
-            </button>
+            <div class="nav-redes">
+              <a href="https://www.facebook.com/academiadriveway" target="_blank"><img src="./img/facebook.svg"
+                  alt="facelogo" /></a>
+              <a href="https://www.instagram.com/academiadriveway" target="_blank"><img src="./img/instagram.svg"
+                  alt="instalogo" /></a>
+              <a href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
+                " target="_blank"><img src="./img/wapp.svg" alt="wapplogo" /></a>
+            </div>
           </div>
-          <div class="Cabecera-nav">
-            <ul class="Cabecera-ul">
-              <div class="nav-redes">
-                <a
-                  href="https://www.facebook.com/academiadriveway"
-                  target="_blank"
-                  ><img src="./img/facebook.svg" alt="facelogo"
-                /></a>
-                <a
-                  href="https://www.instagram.com/academiadriveway"
-                  target="_blank"
-                  ><img src="./img/instagram.svg" alt="instalogo"
-                /></a>
-                <a
-                  href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
-                    "
-                  target="_blank"
-                  ><img src="./img/wapp.svg" alt="wapplogo"
-                /></a>
-              </div>
-              <a href="index.html" class="Cabecera-li">Inicio</a>
-              <a href="./page/preguntas.html" class="Cabecera-li"
-                >Preguntas frecuentes</a
-              >
-              <a href="./page/nosotros.html" class="Cabecera-li">Nosotros</a>
-            </ul>
-          </div>
+          <button class="Cabecera-button">
+            <i class="fa fa-bars"></i>
+          </button>
         </div>
-      </nav>
-    </header>
-
-    <main class="container">
-      <div class="container-video">
-        <video autoplay muted loop id="video-background">
-          <source src="/img/video.mp4" type="video/mp4" />
-        </video>
-        <div class="video-text">
-          <h1 class="animated-heading">DRIVEWAY</h1>
-          <p class="animated-heading">
-            Mas de 20 años de experiencia nos avalan
-          </p>
+        <div class="Cabecera-nav">
+          <ul class="Cabecera-ul">
+            <a href="index.html" class="Cabecera-li">Inicio</a>
+            <a href="./page/preguntas.html" class="Cabecera-li">Preguntas frecuentes</a>
+            <a href="./page/nosotros.html" class="Cabecera-li">Nosotros</a>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <div class="container-horario">
-        <img src="./img/horario-atencion.svg" alt="" />
-        <img src="./img/conitos.svg" alt="" />
+  <main class="container">
+    <div class="container-video">
+      <video autoplay muted loop id="video-background">
+        <source src="/img/video.mp4" type="video/mp4" />
+      </video>
+      <div class="video-text">
+        <h1 class="animated-heading">DRIVEWAY</h1>
+        <p class="animated-heading">
+          Mas de 20 años de experiencia nos avalan
+        </p>
       </div>
-      <!--         <div class="container-carousel">
+    </div>
+
+    <div class="container-horario">
+      <img src="./img/horario-atencion.svg" alt="" />
+      <img src="./img/conitos.svg" alt="" />
+    </div>
+    <!--         <div class="container-carousel">
             <div class="mySlides">
                 <img src="./img/5.jpg" alt="">
             </div>
@@ -104,7 +92,7 @@
             </div>
         </div> -->
 
-      <!-- <div class="container-vision">
+    <!-- <div class="container-vision">
         <div class="container-vision2">
           <img src="./img/1.jpg" alt="" />
           <div class="vision">
@@ -123,135 +111,131 @@
         </div>
       </div> -->
 
-      <div class="container-texto-foto">
-          <div class="container-fondo">
-            <div class="texto1 animated-heading"> <p>Nos
-              especializamos en formar conductores seguros y responsables a
-              través de cursos adaptados a las necesidades individuales de
-              nuestros estudiantes.</p></div>
-          </div>
+    <div class="container-texto-foto">
+      <div class="container-fondo">
+        <div class="texto1 animated-heading">
+          <p>Nos
+            especializamos en formar conductores seguros y responsables a
+            través de cursos adaptados a las necesidades individuales de
+            nuestros estudiantes.</p>
+        </div>
       </div>
+    </div>
 
-      <div class="containerMsg">
-        <div class="msg">
+    <div class="containerMsg">
+      <div class="msg">
+        <p class="animated-heading">
+          Gracias a nuestros vehiculos con <span class="red">doble comando</span>, se fomenta la
+          confianza y se minimizan los riesgos, brindando una experiencia de
+          conducción más <span class="red">segura y tranquila</span>.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-seguridad parallax">
+      <h2 class="animated-heading">Alcanzá tus metas con éxito</h2>
+    </div>
+
+    <div class="container3">
+      <div class="texto2">
+        <h2 class="animated-heading">NUESTROS CURSOS</h2>
+      </div>
+      <div class="container-curso">
+        <div class="curso">
+          <img src="./img/curso.png" alt="" />
+          <h3 class="animated-heading">CURSO INICIAL</h3>
           <p class="animated-heading">
-            Gracias a nuestros vehiculos con <span class="red">doble comando</span>, se fomenta la
-            confianza y se minimizan los riesgos, brindando una experiencia de
-            conducción más <span class="red">segura y tranquila</span>.
+            <b>15</b> clases practicas de 45 minutos.
           </p>
+          <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
+
+          <div class="curso-boton animated-heading">
+            <p class="curso-boton-texto">
+              <a href="">MAS INFORMACION</a>
+            </p>
+          </div>
+        </div>
+        <div class="curso">
+          <img src="./img/curso.png" alt="" />
+          <h3 class="animated-heading">CURSO INTERMEDIO</h3>
+          <p class="animated-heading">
+            <b>10</b> clases practicas de 45 minutos.
+          </p>
+          <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
+          <div class="curso-boton animated-heading">
+            <p class="curso-boton-texto">
+              <a href="">MAS INFORMACION</a>
+            </p>
+          </div>
+        </div>
+        <div class="curso">
+          <img src="./img/curso.png" alt="" />
+          <h3 class="animated-heading">CURSO AVANZADO</h3>
+          <p class="animated-heading">
+            <b>5</b> clases practicas de 45 minutos.
+          </p>
+          <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
+          <div class="curso-boton animated-heading">
+            <p class="curso-boton-texto">
+              <a href="">MAS INFORMACION</a>
+            </p>
+          </div>
         </div>
       </div>
-
-      <div class="container-seguridad parallax">
-        <h2 class="animated-heading">Alcanzá tus metas con éxito</h2>
+      <div class="texto3">
+        <p>
+          *En caso de necesitar mas clases de las establecidas, brindamos la
+          posibilidad de agregar las necesarias a un costo reducido.
+        </p>
       </div>
+    </div>
 
-      
-
-      <div class="container3">
-        <div class="texto2">
-          <h2 class="animated-heading">NUESTROS CURSOS</h2>
+    <div class="servicios">
+      <div class="container-servicio">
+        <div class="servicio-foto">
+          <img src="../img/icono-atencion.png" class="animated-heading" alt="">
         </div>
-        <div class="container-curso">
-          <div class="curso">
-            <img src="./img/curso.png" alt="" />
-            <h3 class="animated-heading">CURSO INICIAL</h3>
-            <p class="animated-heading">
-              <b>15</b> clases practicas de 45 minutos.
-            </p>
-            <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
-
-            <div class="curso-boton animated-heading">
-                <p class="curso-boton-texto">
-                  <a href="">MAS INFORMACION</a>
-                </p>
-            </div>
-          </div>
-          <div class="curso">
-            <img src="./img/curso.png" alt="" />
-            <h3 class="animated-heading">CURSO INTERMEDIO</h3>
-            <p class="animated-heading">
-              <b>10</b> clases practicas de 45 minutos.
-            </p>
-            <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
-            <div class="curso-boton animated-heading">
-              <p class="curso-boton-texto">
-                <a href="">MAS INFORMACION</a>
-              </p>
-          </div>
-          </div>
-          <div class="curso">
-            <img src="./img/curso.png" alt="" />
-            <h3 class="animated-heading">CURSO AVANZADO</h3>
-            <p class="animated-heading">
-              <b>5</b> clases practicas de 45 minutos.
-            </p>
-            <p class="animated-heading"><b>1</b> Simulador de manejo.</p>
-            <div class="curso-boton animated-heading">
-              <p class="curso-boton-texto">
-                <a href="">MAS INFORMACION</a>
-              </p>
-          </div>
-          </div>
-        </div>
-        <div class="texto3">
+        <div class="servicio-texto">
+          <h3>Atencion personalizada</h3>
           <p>
-            *En caso de necesitar mas clases de las establecidas, brindamos la
-            posibilidad de agregar las necesarias a un costo reducido.
+            Te brindamos ayuda en todas las dudas y o imprevistos que tengas a
+            la hora de realizar los tramites. Ademas de facilitarte el material
+            necesario para rendir el examen teorico.
           </p>
         </div>
       </div>
 
-      <div class="container-contenidos">
-        <!-- <div class="texto-cont">
-          <h2 class="animated-heading"> TE OFRECEMOS</h2>
-        </div> -->
-        <div class="servicios">
-          <div class="container-servicio">
-            <div class="servicio-foto">
-              <img src="../img/icono-atencion.png" class="animated-heading" alt="">
-            </div>
-            <div class="servicio-texto">
-                <h3>Atencion personalizada</h3>
-                <p>
-                  Te brindamos ayuda en todas las dudas y o imprevistos que tengas a
-                  la hora de realizar los tramites. Ademas de facilitarte el material
-                  necesario para rendir el examen teorico.
-                </p>
-            </div>
-          </div>
-  
-          <div class="container-servicio">
-            <div class="servicio-foto">
-                <img src="../img/icono-alquiler.png" class="animated-heading" alt="">
-            </div>
-            <div class="servicio-texto">
-                <h3>Alquiler de auto</h3>
-                <p>
-                  Brindamos la posibilidad de que puedas alquilarnos el auto para
-                  rendir el examen practico. Ya sea al finalizar el curso con un
-                  costo reducido o si ya aprendiste por tu cuenta.
-                </p>
-            </div>
-          </div>
-  
-          <div class="container-servicio">
-            <div class="servicio-foto">
-                <img src="../img/icono-simulador.png" class="animated-heading" alt="">
-            </div>
-            <div class="servicio-texto">
-                <h3>Simulador de manejo</h3>
-                <p>
-                  Viene incluido en todos los paquetes de clases. No solo te permite
-                  tener un primer contacto con el manejo sin la presion del trafico
-                  real sino que ademas nos permite a nosotros ver que nivel de
-                  conocimiento tenes.
-                </p>
-            </div>
-          </div>
+      <div class="container-servicio">
+        <div class="servicio-foto">
+          <img src="../img/icono-alquiler.png" class="animated-heading" alt="">
+        </div>
+        <div class="servicio-texto">
+          <h3>Alquiler de auto</h3>
+          <p>
+            Brindamos la posibilidad de que puedas alquilarnos el auto para
+            rendir el examen practico. Ya sea al finalizar el curso con un
+            costo reducido o si ya aprendiste por tu cuenta.
+          </p>
+        </div>
       </div>
 
-      <!-- <div class="container4 parallax2">
+      <div class="container-servicio">
+        <div class="servicio-foto">
+          <img src="../img/icono-simulador.png" class="animated-heading" alt="">
+        </div>
+        <div class="servicio-texto">
+          <h3>Simulador de manejo</h3>
+          <p>
+            Viene incluido en todos los paquetes de clases. No solo te permite
+            tener un primer contacto con el manejo sin la presion del trafico
+            real sino que ademas nos permite a nosotros ver que nivel de
+            conocimiento tenes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container4 parallax2">
         <div class="formulario-container">
           <form>
             <h2>Contacto</h2>
@@ -278,75 +262,58 @@
           </form>
         </div>
       </div> -->
-      <div class="whatsapp-container">
-        <!-- <span>WhatsApp</span> -->
-        <a
-          href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
-                    "
-          target="_blank"
-          ><img src="./img/wapp2.svg" alt="wapplogo" id="whatsapp-icon"
-        /></a>
+    <div class="whatsapp-container">
+      <a href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
+                    " target="_blank"><img src="./img/wapp2.svg" alt="wapplogo" id="whatsapp-icon" /></a>
+    </div>
+  </main>
+  <footer>
+    <div class="container-mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.213689419144!2d-57.550572987684504!3d-37.995475871813504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc03f942b7a5%3A0xde74eaddd92642be!2sDriveway%20academia%20de%20manejo!5e0!3m2!1ses-419!2sar!4v1688585134202!5m2!1ses-419!2sar"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container-datos">
+      <div class="redes">
+        <a href="https://goo.gl/maps/dxamm2EXe23J9yqR8" target="_blank">
+          <img src="./img/maps.svg" alt="" />
+          Hipólito Yrigoyen 1409
+        </a>
       </div>
-    </main>
-    <footer>
-      <div class="container-mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.213689419144!2d-57.550572987684504!3d-37.995475871813504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc03f942b7a5%3A0xde74eaddd92642be!2sDriveway%20academia%20de%20manejo!5e0!3m2!1ses-419!2sar!4v1688585134202!5m2!1ses-419!2sar"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <div class="redes">
+        <a href="tel:2234957684">
+          <img src="./img/telefono.svg" alt="" />
+          0223 495-7684
+        </a>
       </div>
-      <div class="container-datos">
-        <div class="redes">
-          <a href="https://goo.gl/maps/dxamm2EXe23J9yqR8" target="_blank">
-            <img src="./img/maps.svg" alt="" />
-            Hipólito Yrigoyen 1409
-          </a>
-        </div>
-        <div class="redes"> 
-          <a href="tel:2234957684">
-            <img src="./img/telefono.svg" alt=""/>
-            0223 495-7684
-          </a>
-        </div>
-        <div class="redes">
-          <a
-            href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
-                    "
-            target="_blank"
-            >
-            <img src="./img/wapp.svg" alt="wapplogo"
-          />
-            0223 437-6808
-            </a>
-        </div>
-        <div class="redes">
-          <a href="https://www.facebook.com/academiadriveway" target="_blank"
-            >
-            <img src="./img/facebook.svg" alt="facelogo"
-          />
-            Facebook
-            </a>
-        </div>
-        <div class="redes">
-          <a href="https://www.instagram.com/academiadriveway" target="_blank"
-            >
-            <img src="./img/instagram.svg" alt="instalogo"
-          />
-            Instagram
-            </a>
-        </div>
+      <div class="redes">
+        <a href="https://api.whatsapp.com/send?phone=+5492234376808&text=Hola!%20Quisiera%20saber%20mas%20sobre%20los%20cursos%20de%20manejo.
+                    " target="_blank">
+          <img src="./img/wapp.svg" alt="wapplogo" />
+          0223 437-6808
+        </a>
       </div>
-      <div class="container-logo">
-        <img src="./img/dy monograma-02.png" alt="" />
+      <div class="redes">
+        <a href="https://www.facebook.com/academiadriveway" target="_blank">
+          <img src="./img/facebook.svg" alt="facelogo" />
+          Facebook
+        </a>
       </div>
-    </footer>
-    <script src="./js/observer.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/btnWhatsApp.js"></script>
-  </body>
+      <div class="redes">
+        <a href="https://www.instagram.com/academiadriveway" target="_blank">
+          <img src="./img/instagram.svg" alt="instalogo" />
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="container-logo">
+      <img src="./img/dy monograma-02.png" alt="" />
+    </div>
+  </footer>
+  <script src="./js/observer.js"></script>
+  <script src="./js/nav.js"></script>
+  <script src="./js/btnWhatsApp.js"></script>
+</body>
+
 </html>

@@ -9,18 +9,14 @@ $background-color_3: #fff;
 .Cabecera {
     width: 100%;
     background-color: $background-color_2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include properties-flex(row, space-between, center);
     height: 25%;
     color: $color_1;
 
     .dy-foto {
-        width: 270px;
-        padding: 10px;
+        width: 100%;
+        max-width: 250px;
         margin: 15px;
-        border-radius: 5%;
         transition: all ease 1s;
 
         &:hover {
@@ -28,30 +24,37 @@ $background-color_3: #fff;
         }
     }
 
+    .containerBuscador {
+        @include properties-flex(row, center, center);
+        .subcontainerBuscador{
+            @include properties-flex(row, center, center);
+            flex-wrap: nowrap;
+            .nav-redes {
+                @include properties-flex(row, center, center);
+                img {
+                    width: 100%;
+                    max-width: 3.5vw;
+                    min-width: 35px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
     .Cabecera-ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include properties-flex(row, center, center);
         list-style: none;
         background-color: $background-color_2;
 
-        img{
-            width: 100%;
-            max-width: 45px;
-            min-width: 45px;
-            margin: 5px;
-        }
-
         .Cabecera-li {
-            margin: 0 .5em;
+            margin: 0 0.3vw;
+            /* Ajusta el valor en función de tus necesidades */
             display: block;
             color: $color_1;
             padding: 0.5rem 1rem;
             text-align: center;
             text-decoration: none;
-            border-radius: 10%;
-            font-size: 18.5px;
+            font-size: clamp(14px, 2vw, 18.5px);
             font-weight: bold;
             position: relative;
 
@@ -92,29 +95,26 @@ $background-color_3: #fff;
 
 @media screen and (max-width:768px) {
     .Cabecera {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include properties-flex(column, space-between, center);
 
         .containerBuscador {
-            width: 96%;
+            width: 100%;
             @include properties-flex(row, space-between, center);
+            .subcontainerBuscador{
+                flex-wrap: wrap;
+            }
 
             .Cabecera-button {
                 position: relative;
                 display: flex;
                 top: 0%;
-                left: 2%;
+                left: -2%;
             }
         }
 
         .Cabecera-nav {
+            @include properties-flex(row, center, center);
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             height: 0vh;
             opacity: 0;
             overflow: hidden;
@@ -139,6 +139,7 @@ $background-color_3: #fff;
 
             .Cabecera-li {
                 width: 100%;
+                padding: 10px;
             }
         }
     }
