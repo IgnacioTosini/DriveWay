@@ -33,7 +33,7 @@ $background-color_3: #fff;
                 @include properties-flex(row, center, center);
                 img {
                     width: 100%;
-                    max-width: 3.5vw;
+                    max-width: 2.5vw;
                     min-width: 35px;
                     margin: 5px;
                 }
@@ -67,7 +67,7 @@ $background-color_3: #fff;
                 height: 2px;
                 background-color: rgb(255, 0, 0);
                 transform: scaleX(0);
-                transform-origin: left center;
+                transform-origin: center;
                 transition: transform 0.3s ease;
             }
 

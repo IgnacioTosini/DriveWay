@@ -1,21 +1,6 @@
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    let i;
-    let x = document.getElementsByClassName("mySlides");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block";
-}
-
-setInterval(() => {
-    plusDivs(1);
-}, 3000);
+new Glide('.glide', {
+    type: 'carousel',
+    perView: 1,
+    autoplay: 2000, // Intervalo de tiempo en milisegundos para cambiar las diapositivas automáticamente
+    hoverpause: true, // Pausar el carrusel cuando el mouse esté sobre él
+  }).mount();

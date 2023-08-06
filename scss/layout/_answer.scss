@@ -1,10 +1,20 @@
 .container-answers {
-    @include properties-flex(row, center, center);
+    @include properties-flex(column, center, center);
+    align-items: flex-start;
     padding: 20px;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 10px;
     gap: 20px;
-
+    width: 80%;
+    min-height: 90vh;
+    margin-left: 80px;
+    h1{
+        font-size: 60px;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 20px;
+    }
+}
     .imagen {
         width: 40%;
         img {
@@ -33,59 +43,52 @@
             transition: background-image .3s ease-in-out;
             cursor: pointer;
         }
-
-        /* span {
-            transition: transform .5s ease-in-out, opacity .5s ease-in-out;
-            transform: translateX(-100px);
-            opacity: 0;
-            white-space: nowrap;
-            color: white;
-        }
-
-        &.hover {
-            background-image: linear-gradient(to right, #6A354B, #E93237, #5E2E41);
-
-            span {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        } */
     }
 
 
     .container-questions {
-        width: 40%;
-        max-height: 600px;
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar {
+        @include properties-flex(column, center, center);
+        width: 60%;
+        
+         &::-webkit-scrollbar {
             width: 5px;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
-        }
+        } 
     }
 
-    .question {
+     .question {
         cursor: pointer;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin-bottom: 40px;
+        .question-img{
+            @include properties-flex(row, left, center);  
+            img{
+                min-width: 25px;
+                margin-right: 10px;
+            };
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            span{
+                font-size: 25px;
+                font-weight: 500;
+            }
         }
     }
 
     .answer {
         max-height: 0;
         overflow-y: scroll;
-
+        text-align: justify;
+        margin-left: 70px;
+        font-size: 20px;
+        width: 100%;
+        margin-top: 10px;
+        b{
+            color: #E93237;
+        }
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -94,10 +97,9 @@
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
         }
-    }
+    } 
 
     @media screen and (max-width: 700px) {
-        flex-direction: column;
 
         .imagen{
             margin-bottom: 30px;
@@ -108,7 +110,7 @@
             overflow-y: hidden;
         }
     }
-}
+
 
 .question.active .answer {
     max-height: 500px;

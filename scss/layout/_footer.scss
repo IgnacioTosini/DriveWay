@@ -41,12 +41,14 @@ footer {
             width: 100%;
             margin: 0 10px;
             font-size: 1.5rem;
-            a{
+            .red-link{
+                @include properties-flex(row, center, center);
                 text-decoration: none;
                 color: inherit;
-            }
-            img {
-                width: 35px;
+                img {
+                    width: 35px;
+                    margin-right: 10px;
+                }
             }
         }
     }

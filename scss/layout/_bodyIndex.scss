@@ -25,7 +25,7 @@ $background-color_2: #3b3b3b;
         .video-text {
             position: absolute;
             bottom: 10px;
-            right: -20px;
+            right: -150px;
             /* Ajusta el valor negativo para mover el texto más a la derecha */
             transform: translate(-50%, -50%);
             text-align: right;
@@ -35,6 +35,18 @@ $background-color_2: #3b3b3b;
             h1 {
                 font-size: clamp(24px, 6vw, 90px);
                 margin-bottom: 10px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgb(255, 0, 0);
+                    transform: scaleX(1.03);
+                    transform-origin: left center;
+                    transition: transform 0.3s ease;
+                }
             }
 
             p {
@@ -73,7 +85,7 @@ $background-color_2: #3b3b3b;
     .container3 {
         @include properties-flex(column, center, center);
         width: 100%;
-
+        margin-bottom: 30px;
         .texto2 {
             #animated-heading {
                 font-size: 3rem;
@@ -300,6 +312,7 @@ $background-color_2: #3b3b3b;
         img {
             width: 35%;
             min-width: 100px;
+            max-width: 500px;
             margin-left: 15px;
             z-index: 2;
             color: rgb(255, 255, 255);
@@ -459,37 +472,17 @@ $background-color_2: #3b3b3b;
         }
     }
 
-    .parallax2 {
-        background-image: url("/img/8.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(48, 48, 48, 0.5);
-            box-shadow: inset 0 0 20px rgba(48, 48, 48, 0.5);
-        }
-    }
-
     .servicios {
         @include properties-flex(row, center, center);
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-bottom: 30px;
         width: 100%;
-        gap: 20px;
+        gap: 40px;
 
         .container-servicio {
             @include properties-flex(column, center, center);
             margin-bottom: 20px;
-            width: 25%;
+            width: 20%;
 
             .servicio-foto {
                 width: 100%;
@@ -499,6 +492,7 @@ $background-color_2: #3b3b3b;
                 img {
                     max-width: 100%;
                     height: auto;
+                    max-width: 170px;
                 }
             }
 
