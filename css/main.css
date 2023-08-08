@@ -827,7 +827,7 @@ body {
       } */
 }
 .msg .red {
-  color: #990000 !important;
+  color: #ff0000 !important;
 }
 
 .whatsapp-container {
@@ -899,20 +899,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: flex-start;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   gap: 20px;
-  width: 80%;
-  min-height: 90vh;
-  margin-left: 80px;
+  width: 100%;
+  min-height: 75vh;
 }
 .container-answers h1 {
   font-size: 60px;
   font-weight: bold;
   color: red;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .imagen {
@@ -949,10 +947,11 @@ body {
 
 .container-questions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  width: 60%;
+  align-items: flex-start;
+  width: 100%;
+  gap: 50px;
 }
 .container-questions::-webkit-scrollbar {
   width: 5px;
@@ -960,6 +959,13 @@ body {
 .container-questions::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
+}
+.container-questions .preguntas-1, .container-questions .preguntas-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 }
 
 .question {
@@ -988,7 +994,7 @@ body {
   text-align: justify;
   margin-left: 70px;
   font-size: 20px;
-  width: 100%;
+  width: 80%;
   margin-top: 10px;
 }
 .answer b {

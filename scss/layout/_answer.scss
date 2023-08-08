@@ -1,18 +1,16 @@
 .container-answers {
     @include properties-flex(column, center, center);
-    align-items: flex-start;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     gap: 20px;
-    width: 80%;
-    min-height: 90vh;
-    margin-left: 80px;
+    width: 100%;
+    min-height: 75vh;   
     h1{
         font-size: 60px;
         font-weight: bold;
         color: red;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 }
     .imagen {
@@ -47,8 +45,9 @@
 
 
     .container-questions {
-        @include properties-flex(column, center, center);
-        width: 60%;
+        @include properties-flex(row, center, flex-start);
+        width: 100%;
+        gap: 50px;
         
          &::-webkit-scrollbar {
             width: 5px;
@@ -58,6 +57,11 @@
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
         } 
+
+        .preguntas-1,.preguntas-2{
+            @include properties-flex(column, center, center);
+            width: 40%;
+        }
     }
 
      .question {
@@ -84,7 +88,7 @@
         text-align: justify;
         margin-left: 70px;
         font-size: 20px;
-        width: 100%;
+        width: 80%;
         margin-top: 10px;
         b{
             color: #E93237;
