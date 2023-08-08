@@ -8,7 +8,6 @@ $background-color_2: #3b3b3b;
     .container-video {
         position: relative;
         overflow: hidden;
-        margin-top: 30px;
         margin-bottom: 30px;
         width: 100%;
         height: 70vh;
@@ -23,38 +22,43 @@ $background-color_2: #3b3b3b;
         }
 
         .video-text {
-            position: absolute;
-            bottom: 10px;
-            right: -150px;
-            /* Ajusta el valor negativo para mover el texto más a la derecha */
-            transform: translate(-50%, -50%);
+            width: 100%;
             text-align: right;
-            color: #fff;
-            line-height: 1;
+            font-size: 35px;
+            margin-bottom: 40px;
+            height: 40vh;
 
-            h1 {
-                font-size: clamp(24px, 6vw, 90px);
-                margin-bottom: 10px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: -2px;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background-color: rgb(255, 0, 0);
-                    transform: scaleX(1.03);
-                    transform-origin: left center;
-                    transition: transform 0.3s ease;
+            .titulo-texto {
+                position: absolute;
+                bottom: 0px;
+                right: -150px;
+                /* Ajusta el valor negativo para mover el texto más a la derecha */
+                transform: translate(-60%, -50%);
+                text-align: right;
+                color: #fff;
+                line-height: 1;
+
+                p {
+                    font-size: clamp(40px, min(6vw, 60px), 90px);
+                    min-width: 50px;
+                    margin-bottom: 10px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: rgb(255, 0, 0);
+                        transform: scaleX(1.03);
+                        transform-origin: left center;
+                        transition: transform 0.3s ease;
+                    }
                 }
-            }
-
-            p {
-                font-size: clamp(14px, 3vw, 18px);
-            }
-
-            @media (max-width: 500px) {
-                right: -100px;
+                @media (max-width: 910px) {
+                    right: -110px;
+                }
             }
         }
     }
@@ -86,20 +90,18 @@ $background-color_2: #3b3b3b;
         @include properties-flex(column, center, center);
         width: 100%;
         margin-bottom: 30px;
+
         .texto2 {
             #animated-heading {
                 font-size: 3rem;
                 opacity: 0;
-                /* Mantenemos el texto oculto inicialmente */
             }
 
             margin-bottom: 20px;
             width: 100%;
-            /* background-color: #ff0000; */
             text-align: center;
             padding: 20px;
             font-size: 34px;
-            /*             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
             color:#ff0000;
 
             h2 {
@@ -185,122 +187,10 @@ $background-color_2: #3b3b3b;
         }
     }
 
-    .container4 {
-        @include properties-flex(row, flex-end, center);
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-        background-color: rgb(139, 137, 137);
-        padding: 15px;
-        height: 80vh;
-        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-
-        img {
-            width: 100%;
-            max-width: 500px;
-            height: 100%;
-            object-fit: cover;
-            box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-        }
-
-        .formulario-container {
-            @include properties-flex(row, center, center);
-            z-index: 1;
-            margin-right: 150px;
-
-            form {
-                @include properties-flex(column, center, center);
-                max-width: 350px;
-                width: 100%;
-                padding: 2rem;
-                background-color: #ffffff;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgb(0, 0, 0);
-
-                h2 {
-                    margin-bottom: 1rem;
-                    color: #ff0000;
-                    font-size: 20px;
-                    text-transform: uppercase;
-                }
-
-                .campo {
-                    margin-bottom: 1.5rem;
-                    width: 100%;
-
-                    label {
-                        font-weight: bold;
-                        margin-bottom: 0.5rem;
-                        color: #000000;
-                    }
-
-                    input[type="text"],
-                    input[type="email"],
-                    textarea {
-                        width: 100%;
-                        padding: 0.5rem;
-                        border: none;
-                        border-bottom: 2px solid #000000;
-                        border-radius: 0px;
-                        transition: border-bottom-color .3s ease-in-out;
-
-                        &:focus {
-                            outline: none;
-                            border-bottom-color: #ff0000;
-                        }
-                    }
-
-                    textarea {
-                        min-height: 100px;
-                    }
-                }
-
-                .buttonForm {
-                    padding: .5rem 1rem;
-                    background-color: #ff0000;
-                    color: white;
-                    border: none;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        background-color: #990000;
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                margin: 0;
-            }
-        }
-    }
-
     .texto3 {
         @include properties-flex(row, center, center);
         margin: 20px;
         background-color: #f2f2f2;
-    }
-
-    .container-carousel {
-        width: 100%;
-        max-height: 600px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-        margin-bottom: 30px;
-
-        .mySlides {
-            @include properties-flex(row, center, center);
-            width: 100%;
-            height: 100%;
-
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-            }
-        }
     }
 
     .container-horario {
@@ -311,7 +201,7 @@ $background-color_2: #3b3b3b;
 
         img {
             width: 35%;
-            min-width: 100px;
+            min-width: 140px;
             max-width: 500px;
             margin-left: 15px;
             z-index: 2;
@@ -394,12 +284,10 @@ $background-color_2: #3b3b3b;
         height: 25vh;
         margin-bottom: 30px;
         @include properties-flex(column, center, center);
-        /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
         text-align: center;
 
         #animated-heading {
             opacity: 0;
-            /* Mantenemos el texto oculto inicialmente */
         }
 
         h2 {
@@ -544,24 +432,6 @@ $background-color_2: #3b3b3b;
         font-size: 27px;
         line-height: 1.5;
         position: relative;
-
-        /* &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background-color: red;
-            }
-
-            &::before {
-                top: -5px;
-            }
-
-            &::after {
-                bottom: -5px;
-            } */
     }
 
     .red {
@@ -589,7 +459,6 @@ $background-color_2: #3b3b3b;
         transition: background-image 0.3s ease-in-out;
         cursor: pointer;
     }
-
 }
 
 @keyframes scrollUp {

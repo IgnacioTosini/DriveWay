@@ -1,23 +1,26 @@
-.cont-us{
-    .titulo{
+.cont-us {
+    .titulo {
         width: 100%;
         text-align: right;
         font-size: 35px;
-        margin-bottom: 40px; 
+        margin-bottom: 40px;
         height: 40vh;
-        .titulo-texto{
+
+        .titulo-texto {
             position: absolute;
             bottom: -30px;
-            right: -130px;
+            right: -80px;
             /* Ajusta el valor negativo para mover el texto más a la derecha */
-            transform: translate(-50%, -50%);
+            transform: translate(-60%, -50%);
             text-align: right;
             color: #fff;
             line-height: 1;
 
             p {
-                font-size: clamp(24px, 6vw, 90px);
+                font-size: clamp(40px, min(6vw, 60px), 90px);
+                min-width: 50px;
                 margin-bottom: 10px;
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -45,78 +48,104 @@
         position: relative;
     }
 
-    .container-info{
+    .container-info {
         width: 100%;
         @include properties-flex(row, center, center);
         margin-bottom: 30px;
         height: 200px;
         background-color: #cccccc;
-        .info-logo{
+
+        .info-logo {
             width: 30%;
-            img{
+
+            img {
                 width: 100%;
             }
         }
-        .info-texto{
-            width: 25%;
+
+        .info-texto {
+            width: 100%;
+            max-width: 350px;
             margin-left: 30px;
-            font-size: 20px;
             font-weight: bold;
+
+            p {
+                font-size: clamp(10px, 3vw, 18px);
+            }
         }
     }
 
-    .bloque-nosotros{
+    .bloque-nosotros {
         @include properties-flex(row, center, center);
         background-color: #cccccc;
         padding: 30px;
         margin-bottom: 30px;
-        p{
+
+        p {
             text-align: center;
             font-weight: 500;
         }
-        .texto-nosotros{
+
+        .texto-nosotros {
             width: 80%;
             font-size: 26px;
             text-align: justify;
         }
     }
-    
-    .container-nosotros{
-        .container-mision{
+
+    .container-nosotros {
+        .container-mision {
             @include properties-flex(row, center, center);
             padding: 30px;
-            .nosotros-texto{
-                @include properties-flex(column, left, center);
+            gap: 25px;
+
+            .nosotros-texto {
+                @include properties-flex(column, left, flex-start);
                 font-size: 20px;
-                width: 23%;
+                width: 100%;
+                max-width: 400px;
                 margin-left: 30px;
                 text-align: left;
-                align-items: flex-start;
-                h2{ 
-                    color:red;
+
+                h2 {
+                    color: red;
+                }
+
+                @media screen and (max-width:770px) {
+                    @include properties-flex(column, left, center);
+                    max-width: fit-content;
+                    text-align: center;
+                    margin: 0px;
                 }
             }
+
             .nosotros-foto {
                 overflow: hidden;
-                width: 40%;
+                width: 100%;
+                max-width: fit-content;
                 height: 100%;
-              
+
                 img {
-                  width: 700px;
+                    width: 100%;
+                    max-width: 700px;
                 }
-              
+
                 #imagen-zoom {
-                  transition: transform 0.7s ease;
+                    transition: transform 0.7s ease;
                 }
-              
+
                 &:hover #imagen-zoom {
-                  transform: scale(1.2);
+                    transform: scale(1.2);
                 }
-              }
+
+                @media screen and (max-width:770px) {
+                    max-width: 500px;
+                }
+            }
+
+            @media screen and (max-width:770px) {
+                @include properties-flex(column, center, center);
+            }
         }
     }
-
 }
-
-
-

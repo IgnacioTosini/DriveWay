@@ -26,16 +26,26 @@ $background-color_3: #fff;
 
     .containerBuscador {
         @include properties-flex(row, center, center);
-        .subcontainerBuscador{
+
+        .subcontainerBuscador {
             @include properties-flex(row, center, center);
             flex-wrap: nowrap;
+
             .nav-redes {
                 @include properties-flex(row, center, center);
+
                 img {
                     width: 100%;
                     max-width: 2.5vw;
                     min-width: 35px;
                     margin: 5px;
+                }
+
+                @media (max-width:415px) {
+                    position: relative;
+                    @include properties-flex(column, space-between, center);
+                    top: 15px;
+                    right: 5px;
                 }
             }
         }
@@ -100,15 +110,20 @@ $background-color_3: #fff;
         .containerBuscador {
             width: 100%;
             @include properties-flex(row, space-between, center);
-            .subcontainerBuscador{
-                flex-wrap: wrap;
+
+            @media (max-width:415px) {
+                @include properties-flex(column, space-between, center);
             }
 
             .Cabecera-button {
                 position: relative;
                 display: flex;
-                top: 0%;
-                left: -2%;
+                z-index: 99;
+
+                @media (max-width:415px) {
+                    left: 5px;
+                    bottom: 10px;
+                }
             }
         }
 
@@ -125,12 +140,6 @@ $background-color_3: #fff;
             position: relative;
             height: fit-content;
             opacity: 1;
-        }
-
-        .menuAbierto {
-            position: relative;
-            top: -3rem;
-            z-index: 99;
         }
 
         .Cabecera-ul {
