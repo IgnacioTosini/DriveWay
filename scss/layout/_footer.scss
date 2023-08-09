@@ -13,6 +13,7 @@ footer {
         width: 100%;
         height: 100%;
         display: flex;
+
         img {
             width: 100%;
             max-width: 300px;
@@ -21,6 +22,7 @@ footer {
 
     .container-mapa {
         margin: 20px;
+
         iframe {
             min-width: 300px;
             width: 100%;
@@ -41,10 +43,12 @@ footer {
             width: 100%;
             margin: 0 10px;
             font-size: 1.5rem;
-            .red-link{
+
+            .red-link {
                 @include properties-flex(row, center, center);
                 text-decoration: none;
                 color: inherit;
+
                 img {
                     width: 35px;
                     margin-right: 10px;

@@ -56,32 +56,10 @@ $background-color_2: #3b3b3b;
                         transition: transform 0.3s ease;
                     }
                 }
+
                 @media (max-width: 910px) {
                     right: -110px;
                 }
-            }
-        }
-    }
-
-    .container1 {
-        background-image: url("/img/5.jpg");
-        @include properties-flex(row, flex-end, center);
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-        background-repeat: none;
-        box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-
-        .texto1 {
-            margin-bottom: 255px;
-
-            h2 {
-                font-size: 40px;
-            }
-
-            p,
-            h2 {
-                color: white;
             }
         }
     }
@@ -223,63 +201,6 @@ $background-color_2: #3b3b3b;
         }
     }
 
-    .container-texto-foto {
-        @include properties-flex(row, center, flex-end);
-        width: auto;
-
-        .container-fondo {
-            @include properties-flex(row, flex-end, flex-start);
-            background-image: url(/img/interior.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin-bottom: 30px;
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            height: 482px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                /* Ajusta el valor de transparencia según tus necesidades */
-            }
-
-            .texto1 {
-                margin-right: 5vw;
-                z-index: 1;
-                color: #ffffff;
-                text-align: right;
-                width: 45%;
-                margin-top: 20px;
-                font-size: clamp(1.5vw, 2.3vw, 32px);
-                /* Utiliza clamp() para el tamaño del texto */
-                width: 100%;
-                max-width: 250px;
-                /* Asegura que el texto no se desborde del contenedor */
-                word-wrap: break-word;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .container-fondo {
-                height: 300px;
-            }
-
-            .texto1 {
-                margin-right: 20px;
-
-                p {
-                    font-size: 22px;
-                }
-            }
-        }
-    }
-
     .container-seguridad {
         height: 25vh;
         margin-bottom: 30px;
@@ -310,21 +231,6 @@ $background-color_2: #3b3b3b;
             }
         }
 
-        .p-atencion {
-            width: 70%;
-            z-index: 1;
-
-            p {
-                z-index: 1;
-                font-size: 20px;
-                color: white;
-
-                @media screen and (max-width: 650px) {
-                    font-size: 1.1rem;
-                }
-            }
-        }
-
         @media screen and (max-width: 950px) {
             height: 25vh;
         }
@@ -351,12 +257,7 @@ $background-color_2: #3b3b3b;
             left: 0;
             right: 0;
             bottom: 0;
-            /* Color del sombreado */
             background-color: rgba(0, 0, 0, 0.377);
-            /* Puedes ajustar los valores RGB y el nivel de opacidad (alfa) según tus necesidades */
-            /* Sombra */
-            /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9); */
-            /* Puedes ajustar el tamaño y el color de la sombra según tus necesidades */
         }
     }
 
@@ -418,27 +319,25 @@ $background-color_2: #3b3b3b;
     @include properties-flex(row, center, center);
     margin-bottom: 30px;
     background-color: #f2f2f2;
-    /*         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
-}
 
-.msg {
-    padding: 20px;
-    background-color: #cccccc;
-    /*         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-    text-align: center;
+    .msg {
+        padding: 20px;
+        background-color: #cccccc;
+        text-align: center;
 
-    p {
-        color: #000000;
-        font-size: 27px;
-        line-height: 1.5;
-        position: relative;
-    }
+        p {
+            color: #000000;
+            font-size: 27px;
+            line-height: 1.5;
+            position: relative;
+        }
 
-    .red {
-        color: #ff0000 !important;
-        ;
+        .red {
+            color: #ff0000 !important;
+        }
     }
 }
+
 
 .whatsapp-container {
     position: fixed;
@@ -454,7 +353,6 @@ $background-color_2: #3b3b3b;
         width: 100%;
         min-width: 60px;
         max-width: 5vw;
-        /* Ajusta el valor de la unidad vw */
         margin-left: 10px;
         transition: background-image 0.3s ease-in-out;
         cursor: pointer;
@@ -470,19 +368,6 @@ $background-color_2: #3b3b3b;
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-width: 900px) {
-    .container {
-        .container2 {
-            @include properties-flex(column, center, center);
-            align-items: center;
-
-            .containerTitle {
-                width: 80%;
-            }
-        }
     }
 }
 
