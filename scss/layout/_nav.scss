@@ -30,23 +30,21 @@ $background-color_3: #fff;
         .subcontainerBuscador {
             @include properties-flex(row, center, center);
             flex-wrap: nowrap;
+        }
 
-            .nav-redes {
-                @include properties-flex(row, center, center);
+        .nav-redes {
+            @include properties-flex(row, center, center);
 
-                img {
-                    width: 100%;
-                    max-width: 2.5vw;
-                    min-width: 35px;
-                    margin: 5px;
-                }
+            img {
+                width: 100%;
+                max-width: 2.5vw;
+                min-width: 35px;
+                margin: 5px;
+            }
 
-                @media (max-width:415px) {
-                    position: relative;
-                    @include properties-flex(column, space-between, center);
-                    top: 15px;
-                    right: 5px;
-                }
+            @media (max-width:415px) {
+                position: relative;
+                @include properties-flex(row, space-between, center);
             }
         }
     }
@@ -58,7 +56,6 @@ $background-color_3: #fff;
 
         .Cabecera-li {
             margin: 0 0.3vw;
-            /* Ajusta el valor en función de tus necesidades */
             display: block;
             color: $color_1;
             padding: 0.5rem 1rem;
@@ -99,6 +96,22 @@ $background-color_3: #fff;
 
         &:focus {
             outline: none;
+        }
+
+        @media screen and (max-width:768px) {
+            position: relative;
+            display: flex;
+            z-index: 99;
+            left: 3%;
+        }
+
+        @media (max-width: 435px) {
+            left: 7%;
+        }
+
+        @media (max-width:415px) {
+            left: 5px;
+            top: 4px;
         }
     }
 }

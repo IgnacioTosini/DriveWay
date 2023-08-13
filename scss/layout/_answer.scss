@@ -12,8 +12,9 @@
         font-weight: bold;
         color: red;
         margin-bottom: 50px;
+
         @media (max-width:400px) {
-        font-size: 40px;
+            font-size: 40px;
         }
     }
 }
